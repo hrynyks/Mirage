@@ -1,0 +1,58 @@
+.header {
+    padding: 58px 0 110px;
+    position: relative;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 72px;
+
+        @include a (mobile) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        &-link {
+            font-family: 'Circular Std', sans-serif;
+            font-size: toRem(20);
+            font-weight: 500;
+            color: $medium-color;
+
+            &:hover {
+                color: $dark-color;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        &-line {
+            width: 16px;
+            height: 2px;
+            background-color: #AAAAAB;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+}

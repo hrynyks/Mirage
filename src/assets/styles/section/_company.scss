@@ -1,0 +1,18 @@
+.company {
+    padding-bottom: 163px;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 90px;
+
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 20px;
+        }
+
+        @include a (mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.hero {
+    padding-bottom: 139px;
+    position: relative;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__title-sml {
+        padding-left: 40px;
+        position: relative;
+        margin-bottom: 29px;
+
+        @include a (tablet) {
+            padding-left: 0;
+            text-align: center;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 36px;
+            height: 3px;
+            background-color: $main-color;
+            left: 0;
+            bottom: 5px;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        font-family: 'Circular Std', sans-serif;
+        font-size: toRem(64);
+        line-height: 74px;
+        font-weight: 700;
+        max-width: 600px;
+        width: 100%;
+        color: $dark-color;
+        margin-bottom: 31px;
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        font-size: toRem(20);
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: $medium-color;
+        max-width: 537px;
+        width: 100%;
+        margin-bottom: 42px;
+
+        @include a (tablet) {
+            margin: 0 auto 42px;
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        line-height: 66px;
+
+        @include a (tablet) {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        // bottom: 0;
+    }
+}
